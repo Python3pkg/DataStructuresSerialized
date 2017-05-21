@@ -44,7 +44,7 @@ class DataStructuresSerialized():
         if not self.deserializationStruct:
             self.serializedString = None
             return
-        data = list(map(lambda i: str(i), self.deserializationStruct))
+        data = list([str(i) for i in self.deserializationStruct])
 
         for index, item in enumerate(data):
             if self.separator in item:
